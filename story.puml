@@ -1,0 +1,80 @@
+@startuml
+skinparam shadowing false
+skinparam monochrome true
+
+'Classes
+class Story
+class Scene
+class Map
+class "Character List" as CL
+class "Event Sequence" as ES
+
+interface Targetable
+
+class Character
+class Event
+class Location
+
+class History {
+previousScene
+}
+
+class Object {
+    description
+}
+class Body {
+    type
+    controllingCharacter
+}
+
+class ObjectState {
+    fatigue
+    damage
+}
+
+class CharacterState {
+    desire
+    consciousness
+}
+class Information
+
+interface Ability {
+    target
+    doAbility()
+}
+abstract Communication
+abstract Manipulation
+
+'Connections
+Story o-- "0..*" Scene
+
+Scene *-- "1" Map
+Scene *-- "1" CL
+Scene *-- "1" ES
+
+hide Targetable
+Targetable <|-- Character
+Targetable <|-- Location
+Targetable <|-- Object
+
+Character *-- "1" CharacterState
+CharacterState o-- "0..*" Information
+
+ObjectState *-- "1" History
+
+CL o-- "0..*" Character
+ES o-- "0..*" Event
+Map o-- "0..*" Location
+
+Location o-- "0..*" Object
+Location o-- "0..*" Location
+Object <|-- Body
+Body o- "0..*" Object
+
+Object *-- "1" ObjectState
+Body *-- "1..*" Ability
+Ability <|-- Communication
+Ability <|-- Manipulation
+Information "1" --* Communication
+
+@enduml
