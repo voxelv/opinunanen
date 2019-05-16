@@ -5,8 +5,8 @@ Open Integrated Universe Analysis Engine
 ## Idea
 1. Create a universe.
 2. Add elements.
-3. Analyze plot holes.
+3. Analyze.
 
 
 ## Diagram
-![alt text](plantuml_images/story.png "Logo Title Text 1")
+![scene_class_diagram](plantuml_images/story.png "Scene Class Diagram")
