@@ -1,0 +1,843 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://testing/theme_test.gd" type="Script" id=1]
+[ext_resource path="res://assets/gray_editor_theme.tres" type="Theme" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="theme_test" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+editor/display_folded = true
+margin_right = 171.0
+margin_bottom = 600.0
+
+[node name="Button" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+margin_right = 171.0
+margin_bottom = 25.0
+text = "Button"
+
+[node name="CheckBox" type="CheckBox" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 30.0
+margin_right = 171.0
+margin_bottom = 60.0
+text = "CheckBox"
+
+[node name="CheckButton" type="CheckButton" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 65.0
+margin_right = 171.0
+margin_bottom = 107.0
+text = "CheckButton"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 112.0
+margin_right = 171.0
+margin_bottom = 137.0
+
+[node name="MenuButton" type="MenuButton" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 142.0
+margin_right = 171.0
+margin_bottom = 167.0
+text = "MenuButton"
+
+[node name="OptionButton" type="OptionButton" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 172.0
+margin_right = 171.0
+margin_bottom = 197.0
+text = "OptionButton"
+
+[node name="ToolButton" type="ToolButton" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 202.0
+margin_right = 171.0
+margin_bottom = 227.0
+text = "ToolButton"
+
+[node name="LinkButton" type="LinkButton" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 232.0
+margin_right = 171.0
+margin_bottom = 247.0
+text = "LinkButton"
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 252.0
+margin_right = 171.0
+margin_bottom = 332.0
+texture_normal = ExtResource( 3 )
+stretch_mode = 5
+
+[node name="Tree" type="Tree" parent="Control/HBoxContainer/VBoxContainer"]
+margin_top = 337.0
+margin_right = 171.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 176.0
+margin_right = 593.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer2"]
+margin_right = 417.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer"]
+margin_right = 417.0
+margin_bottom = 375.0
+
+[node name="VSeparator" type="VSeparator" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_right = 4.0
+margin_bottom = 375.0
+
+[node name="VScrollBar" type="VScrollBar" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 9.0
+margin_right = 24.0
+margin_bottom = 375.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+editor/display_folded = true
+margin_left = 29.0
+margin_right = 279.0
+margin_bottom = 375.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 250, 50 )
+color = Color( 1, 0.631373, 0, 1 )
+
+[node name="HSeparator" type="HSeparator" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 55.0
+margin_right = 250.0
+margin_bottom = 59.0
+
+[node name="HScrollBar" type="HScrollBar" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 250.0
+margin_bottom = 79.0
+
+[node name="HSlider" type="HSlider" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 84.0
+margin_right = 250.0
+margin_bottom = 89.0
+ticks_on_borders = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 94.0
+margin_right = 250.0
+margin_bottom = 109.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="SpinBox" type="SpinBox" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 114.0
+margin_right = 250.0
+margin_bottom = 139.0
+prefix = "SpinBox"
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 250.0
+margin_bottom = 224.0
+value = 50.0
+texture_progress = ExtResource( 3 )
+
+[node name="ItemList" type="ItemList" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 229.0
+margin_right = 250.0
+margin_bottom = 345.0
+items = [ "ItemList 0", ExtResource( 3 ), false, "ItemList 1", ExtResource( 3 ), false ]
+auto_height = true
+max_columns = 3
+same_column_width = true
+icon_mode = 0
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 350.0
+margin_right = 250.0
+margin_bottom = 375.0
+text = "Label"
+
+[node name="VSlider" type="VSlider" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 284.0
+margin_right = 289.0
+margin_bottom = 375.0
+ticks_on_borders = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 294.0
+margin_right = 417.0
+margin_bottom = 375.0
+
+[node name="LineEdit" type="LineEdit" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_right = 123.0
+margin_bottom = 25.0
+text = "LineEdit"
+max_length = 50
+expand_to_text_length = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_top = 30.0
+margin_right = 123.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 80, 80 )
+patch_margin_left = 32
+patch_margin_top = 29
+patch_margin_right = 30
+patch_margin_bottom = 26
+
+[node name="Panel" type="Panel" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_top = 135.0
+margin_right = 123.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="TestTabContainer" type="TabContainer" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_top = 240.0
+margin_right = 123.0
+margin_bottom = 375.0
+size_flags_vertical = 3
+
+[node name="Tab1" type="CenterContainer" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3/TestTabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 33.25
+margin_right = -6.25
+margin_bottom = -6.25
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="1" type="Label" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3/TestTabContainer/Tab1"]
+margin_left = 45.0
+margin_top = 35.0
+margin_right = 64.0
+margin_bottom = 60.0
+text = "1"
+
+[node name="Tab2" type="CenterContainer" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3/TestTabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 33.25
+margin_right = -6.25
+margin_bottom = -6.25
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="2" type="Label" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3/TestTabContainer/Tab2"]
+margin_left = 50.0
+margin_top = 35.0
+margin_right = 60.0
+margin_bottom = 60.0
+text = "2"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/VBoxContainer2/VBoxContainer"]
+margin_top = 380.0
+margin_right = 417.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_vertical = 3
+text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890‘?’“!”(%)[#]{@}/
+&\\<-+÷×=>®©$€£¥¢:;,.*"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 598.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="tab_option" type="OptionButton" parent="Control/HBoxContainer/VBoxContainer4"]
+margin_right = 426.0
+margin_bottom = 25.0
+
+[node name="TabContainer" type="TabContainer" parent="Control/HBoxContainer/VBoxContainer4"]
+margin_top = 30.0
+margin_right = 426.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tabs_visible = false
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/CenterContainer"]
+margin_left = 134.0
+margin_top = 266.0
+margin_right = 279.0
+margin_bottom = 291.0
+text = "CenterContainer"
+
+[node name="ColorPicker" type="ColorPicker" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/HBoxContainer"]
+margin_top = 13.0
+margin_right = 102.0
+margin_bottom = 27.0
+text = "HboxContainer1"
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/HBoxContainer"]
+margin_left = 106.0
+margin_top = 13.0
+margin_right = 208.0
+margin_bottom = 27.0
+text = "HboxContainer2"
+
+[node name="Label3" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/HBoxContainer"]
+margin_left = 212.0
+margin_top = 13.0
+margin_right = 314.0
+margin_bottom = 27.0
+text = "HboxContainer3"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 14.0
+text = "VBoxContainer1"
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 101.0
+margin_bottom = 32.0
+text = "VBoxContainer2"
+
+[node name="Label3" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 101.0
+margin_bottom = 50.0
+text = "VBoxContainer3"
+
+[node name="GraphEdit" type="GraphEdit" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+
+[node name="GraphNode" type="GraphNode" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GraphEdit"]
+margin_left = 100.0
+margin_top = 150.0
+margin_right = 263.0
+margin_bottom = 186.25
+mouse_filter = 1
+size_flags_horizontal = 5
+size_flags_vertical = 5
+title = "GraphNode1"
+offset = Vector2( 100, 150 )
+
+[node name="GraphNode2" type="GraphNode" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GraphEdit"]
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 281.0
+margin_bottom = 316.25
+mouse_filter = 1
+size_flags_horizontal = 5
+size_flags_vertical = 5
+title = "GraphNode2"
+offset = Vector2( 100, 200 )
+show_close = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GraphEdit/GraphNode2"]
+margin_left = 35.0
+margin_top = 30.0
+margin_right = 146.0
+margin_bottom = 110.0
+texture = ExtResource( 3 )
+
+[node name="GridContainer" type="GridContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_left = 84.0
+margin_right = 164.0
+margin_bottom = 80.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_left = 168.0
+margin_right = 248.0
+margin_bottom = 80.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect4" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_left = 252.0
+margin_right = 332.0
+margin_bottom = 80.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect5" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_top = 84.0
+margin_right = 80.0
+margin_bottom = 164.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect6" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_left = 84.0
+margin_top = 84.0
+margin_right = 164.0
+margin_bottom = 164.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect7" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_left = 168.0
+margin_top = 84.0
+margin_right = 248.0
+margin_bottom = 164.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect8" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_left = 252.0
+margin_top = 84.0
+margin_right = 332.0
+margin_bottom = 164.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect9" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_top = 168.0
+margin_right = 80.0
+margin_bottom = 248.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect10" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/GridContainer"]
+margin_left = 84.0
+margin_top = 168.0
+margin_right = 164.0
+margin_bottom = 248.0
+texture = ExtResource( 3 )
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offset = 100
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/HSplitContainer"]
+margin_right = 100.0
+margin_bottom = 564.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/HSplitContainer"]
+margin_left = 112.0
+margin_right = 424.0
+margin_bottom = 564.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offset = 100
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/VSplitContainer"]
+margin_right = 424.0
+margin_bottom = 100.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="TextureRect4" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/VSplitContainer"]
+margin_top = 112.0
+margin_right = 424.0
+margin_bottom = 564.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/MarginContainer"]
+margin_left = 100.0
+margin_top = 266.0
+margin_right = 313.0
+margin_bottom = 291.0
+text = "MarginContainer"
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 103.0
+margin_bottom = 21.0
+text = "PanelContainer"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.25
+margin_top = 6.25
+margin_right = -6.25
+margin_bottom = -6.25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer"]
+margin_right = 1738.0
+margin_bottom = 1315.0
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_right = 1368.0
+margin_bottom = 14.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 1368.0
+margin_bottom = 32.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label3" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 1368.0
+margin_bottom = 50.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label4" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 54.0
+margin_right = 1368.0
+margin_bottom = 68.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label5" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 1368.0
+margin_bottom = 86.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label6" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 90.0
+margin_right = 1368.0
+margin_bottom = 104.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label7" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 108.0
+margin_right = 1368.0
+margin_bottom = 122.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label8" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 126.0
+margin_right = 1368.0
+margin_bottom = 140.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label9" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 1368.0
+margin_bottom = 158.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label10" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 1368.0
+margin_bottom = 176.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label11" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 180.0
+margin_right = 1368.0
+margin_bottom = 194.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label12" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 198.0
+margin_right = 1368.0
+margin_bottom = 212.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label13" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 216.0
+margin_right = 1368.0
+margin_bottom = 230.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label14" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 234.0
+margin_right = 1368.0
+margin_bottom = 248.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label15" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 252.0
+margin_right = 1368.0
+margin_bottom = 266.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label16" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 270.0
+margin_right = 1368.0
+margin_bottom = 284.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label17" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 288.0
+margin_right = 1368.0
+margin_bottom = 302.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label18" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 306.0
+margin_right = 1368.0
+margin_bottom = 320.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label19" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 324.0
+margin_right = 1368.0
+margin_bottom = 338.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label20" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 342.0
+margin_right = 1368.0
+margin_bottom = 356.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label21" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 360.0
+margin_right = 1368.0
+margin_bottom = 374.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label22" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 378.0
+margin_right = 1368.0
+margin_bottom = 392.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label23" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 396.0
+margin_right = 1368.0
+margin_bottom = 410.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label24" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 414.0
+margin_right = 1368.0
+margin_bottom = 428.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label25" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 432.0
+margin_right = 1368.0
+margin_bottom = 446.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label26" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 450.0
+margin_right = 1368.0
+margin_bottom = 464.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label27" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 468.0
+margin_right = 1368.0
+margin_bottom = 482.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label28" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 486.0
+margin_right = 1368.0
+margin_bottom = 500.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label29" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 504.0
+margin_right = 1368.0
+margin_bottom = 518.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label30" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 522.0
+margin_right = 1368.0
+margin_bottom = 536.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label31" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 540.0
+margin_right = 1368.0
+margin_bottom = 554.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label32" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 558.0
+margin_right = 1368.0
+margin_bottom = 572.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label33" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 576.0
+margin_right = 1368.0
+margin_bottom = 590.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label34" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 594.0
+margin_right = 1368.0
+margin_bottom = 608.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label35" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 612.0
+margin_right = 1368.0
+margin_bottom = 626.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label36" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 630.0
+margin_right = 1368.0
+margin_bottom = 644.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label37" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 648.0
+margin_right = 1368.0
+margin_bottom = 662.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label38" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 666.0
+margin_right = 1368.0
+margin_bottom = 680.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label39" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 684.0
+margin_right = 1368.0
+margin_bottom = 698.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label40" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 702.0
+margin_right = 1368.0
+margin_bottom = 716.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label41" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 720.0
+margin_right = 1368.0
+margin_bottom = 734.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label42" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 738.0
+margin_right = 1368.0
+margin_bottom = 752.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label43" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 756.0
+margin_right = 1368.0
+margin_bottom = 770.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"
+
+[node name="Label44" type="Label" parent="Control/HBoxContainer/VBoxContainer4/TabContainer/ScrollContainer/VBoxContainer"]
+margin_top = 774.0
+margin_right = 1368.0
+margin_bottom = 788.0
+text = "LongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLineLongLine"

@@ -106,3 +106,8 @@ gen
 ### Other User Additions
 # dl folder for interwebs test files
 dl
+
+### Godot
+*~
+.import/
+logs/
