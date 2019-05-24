@@ -14,6 +14,7 @@ interface Targetable
 class Character
 class Event
 class Location
+class CharacterAbility
 
 class History {
 previousScene
@@ -52,12 +53,13 @@ Scene *-- "1" Map
 Scene *-- "1" CL
 Scene *-- "1" ES
 
-hide Targetable
+'hide Targetable
 Targetable <|-- Character
 Targetable <|-- Location
 Targetable <|-- Object
 
 Character *-- "1" CharacterState
+Character *-- "0..*" CharacterAbility
 CharacterState o-- "0..*" Information
 
 ObjectState *-- "1" History
