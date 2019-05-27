@@ -19,6 +19,10 @@ config/name="opinunanen"
 run/main_scene="res://main/main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+constants="*res://autoload/constants.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
